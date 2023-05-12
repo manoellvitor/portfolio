@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <div
       className={`flex justify-center items-center h-screen flex-col ${
-        darkMode ? "bg-[#121214]" : "bg-slate-50"
+        darkMode ? "bg-zBlack" : "bg-slate-50"
       }`}
     >
       <div
@@ -44,53 +44,79 @@ export default function Home() {
         }`}
         onClick={handleSetDarkMode}
       >
-        {darkMode ? <Sun size={24} /> : <Moon size={24} />}
+        {darkMode ? (
+          <Sun
+            size={24}
+            className="hover:text-slate-400 transform duration-300 ease-in-out"
+          />
+        ) : (
+          <Moon size={24} />
+        )}
       </div>
       <Image
         className="w-[200px] mb-5"
         src={HackerAvatar}
         alt="Manoel Lopes, Hacker avatar Pixel-Art like."
       />
-      <h1
-        className={`text-5xl font-bold uppercase ${fontLogo.className} ${
-          darkMode ? "text-slate-50" : "text-[#121214]"
-        }`}
-      >
-        Manoel Lopes
-      </h1>
+      <div className="flex flex-col md:flex-row gap-4 items-center">
+        <h1
+          className={`text-5xl font-bold uppercase ${fontLogo.className} ${
+            darkMode ? "text-slate-50" : "text-zBlack"
+          }`}
+        >
+          Manoel
+        </h1>
+        <h1
+          className={`text-5xl font-bold uppercase ${fontLogo.className} ${
+            darkMode ? "text-slate-50" : "text-zBlack"
+          }`}
+        >
+          Lopes
+        </h1>
+      </div>
       <h1 className={`text-2xl text-violet-900 ${fontText.className}`}>
         <Typewriter
           options={{
-            strings: [
-              "QA Developer",
-              "Quality Assurance (QA) Tester",
-              "Software Tester",
-              "Software Developer",
-            ],
+            strings: ["QA Developer", "Software Tester", "Software Developer"],
             autoStart: true,
             loop: true,
           }}
         />
       </h1>
       <div
-        className={`mt-10 flex gap-2 ${
-          darkMode ? "text-slate-50" : "text-gray-900"
+        className={`mt-10 flex gap-4 ${
+          darkMode ? "text-slate-50" : "text-zBlack"
         }`}
       >
         <a href="https://github.com/manoellvitor" target="_blank">
-          <FaGithub size={24} />
+          <FaGithub
+            size={24}
+            className="hover:text-violet-600 transform duration-300 ease-in-out"
+          />
         </a>
         <a href="https://www.linkedin.com/in/manoellvitor" target="_blank">
-          <FaLinkedin size={24} />
+          <FaLinkedin
+            size={24}
+            className="hover:text-violet-600 transform duration-300 ease-in-out"
+          />
         </a>
         <a href="https://www.hackerrank.com/manoelvitorka" target="_blank">
-          <FaHackerrank size={24} />
+          <FaHackerrank
+            size={24}
+            className="hover:text-violet-600 transform duration-300 ease-in-out"
+          />
         </a>
         <a href="https://twitter.com/manoelvitornl" target="_blank">
-          <FaTwitter size={24} />
+          <FaTwitter
+            size={24}
+            className="hover:text-violet-600 transform duration-300 ease-in-out"
+          />
         </a>
         <a href="https://manoel-cv.tiiny.site" target="_blank">
-          <FaRegFilePdf size={24} />
+          <FaRegFilePdf
+            size={24}
+            className="hover:text-violet-600 transform duration-300 ease-in-out"
+          />
         </a>
       </div>
     </div>
