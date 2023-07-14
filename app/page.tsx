@@ -112,7 +112,10 @@ export default function Home() {
             className="hover:text-violet-600 transform duration-300 ease-in-out"
           />
         </a>
-        <a href="https://manoel-cv.tiiny.site" target="_blank">
+        <a
+          href="https://drive.google.com/uc?export=download&id=1GsJLYc1hv1LcfAEaU-MsFMCLJE941LRN"
+          // target="_blank"
+        >
           <FaRegFilePdf
             size={24}
             className="hover:text-violet-600 transform duration-300 ease-in-out"
